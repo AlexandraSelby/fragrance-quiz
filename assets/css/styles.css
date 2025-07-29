@@ -1,0 +1,14 @@
+/* Default look */
+.answer-option {
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 4px;
+  display: inline-block;
+  margin: 5px;
+}
+
+/* When selected via JS */
+.answer-option.selected {
+  border-color: #0077ff; /* Blue outline */
+  background-color: #f0f8ff; /* Very light blue background */
+}
