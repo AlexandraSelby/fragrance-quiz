@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fragrance Quiz</title>
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-
-</head>
 <body>
 
+  <!-- First Question -->
   <div id="quiz">
     <h2 id="question">What floral note makes your heart sing?</h2>
     <div id="answers">
@@ -31,7 +23,17 @@
     </div>
   </div>
 
+  <!-- Second Question -->
+  <div id="question2" style="display: none;">
+    <h2>Pick your base:</h2>
+    <label for="preference">Would you rather smell like...</label>
+    <select id="preference">
+      <option value="" disabled selected>Select one</option>
+      <option value="oud">Oud - deep, smoky, mysterious</option>
+      <option value="musk">Musk - soft, skin-like and cozy</option>
+      <option value="both">Both - why not both? I'm fabulous!</option>
+    </select>
+  </div>
 
   <script src="script.js"></script>
 </body>
-</html>

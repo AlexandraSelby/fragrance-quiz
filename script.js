@@ -15,7 +15,24 @@ document.addEventListener("DOMContentLoaded", () => {
       options.forEach(opt => opt.classList.remove("selected"));
       option.classList.add("selected");
 
-      // More logic will go here in the next step (like going to next question)
+      // Hide first question
+      document.getElementById("quiz").style.display = "none";
+
+      // Show second question
+      document.getElementById("question2").style.display = "block";
     });
+  });
+
+
+  const preferenceDropdown = document.getElementById("preference");
+
+  preferenceDropdown.addEventListener("change", () => {
+    const selectedValue = preferenceDropdown.value;
+
+    // Store it like the others
+    selectedAnswers.push(selectedValue);
+    console.log("Stored answers so far:", selectedAnswers);
+
+    // TODO: Show question 3 here later
   });
 });
