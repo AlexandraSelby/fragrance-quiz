@@ -51,7 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
     "question2",
     "#answers .answer-option"
   );
+    // Question 2: Base note → Signature sip (initially was a dropdown)
+  wireQuestion(
+    "question2",
+    "question3",
+    "#base-options .answer-option"
+  );
 
-  // TODO: wire up Question 2, 3, 4, 5 in exactly the same way
+
+  // TODO: wire up Question 3, 4, 5 in exactly the same way
 });
 
