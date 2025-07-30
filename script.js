@@ -57,8 +57,14 @@ document.addEventListener("DOMContentLoaded", () => {
     "question3",
     "#base-options .answer-option"
   );
+    // Question 3: Signature sip → Edible notes (initially was button selection)
+  wireQuestion(
+    "question3",
+    "question4",
+    "#drink-options .answer-option"
+  );
 
 
-  // TODO: wire up Question 3, 4, 5 in exactly the same way
+  // TODO: wire up Question  4, 5 in exactly the same way
 });
 
