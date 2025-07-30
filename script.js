@@ -66,10 +66,29 @@ if (edibleForm) {
 
     console.log("Stored answers so far:", selectedAnswers);
 
+      // Hide Q4, show Q5
     document.getElementById("question4").style.display = "none";
-    alert("Great! You made it through Question 4.");
+    document.getElementById("question5").style.display = "block";
+
   });
 }
+// Question 5: Aesthetic Vibe (Image click)
+const aestheticOptions = document.querySelectorAll(".aesthetic-option");
+
+aestheticOptions.forEach(option => {
+  option.addEventListener("click", () => {
+    // 1. Store the selected profile
+    const profile = option.dataset.profile;
+    selectedAnswers.push(profile);
+    console.log("Stored answers so far:", selectedAnswers);
+
+    // 2. Hide Question 5
+    document.getElementById("question5").style.display = "none";
+
+    // 3. TODO: Show next question or results
+    // e.g. document.getElementById("results").style.display = "block";
+  });
+});
 
 });
 
