@@ -45,18 +45,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ————————————————
+  
   // Question 1: Floral note → Base note (initial image click)
   wireQuestion(
     "quiz",
     "question2",
     "#answers .answer-option"
   );
+
     // Question 2: Base note → Signature sip (initially was a dropdown)
   wireQuestion(
     "question2",
     "question3",
     "#base-options .answer-option"
   );
+
     // Question 3: Signature sip → Edible notes (initially was button selection)
   wireQuestion(
     "question3",
@@ -64,7 +67,13 @@ document.addEventListener("DOMContentLoaded", () => {
     "#drink-options .answer-option"
   );
 
+  // Question 4: Edible notes → Aesthetic vibe
+wireQuestion(
+  "question4",
+  "question5",
+  "#edible-options .edible-option"
+);
 
-  // TODO: wire up Question  4, 5 in exactly the same way
+  // TODO: wire up Question 4, 5 in exactly the same way
 });
 

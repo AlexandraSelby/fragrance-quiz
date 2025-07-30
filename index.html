@@ -1,108 +1,144 @@
 <body>
-
   <!-- First Question -->
+
   <div id="quiz">
     <h2 id="question">What floral note makes your heart sing?</h2>
     <div id="answers">
       <div class="answer-option" data-profile="romantic">
-        <img src="/assets/images/rose.png" alt="Rose">
+        <img src="/assets/images/rose.png" alt="Rose" />
         <p>Rose</p>
       </div>
       <div class="answer-option" data-profile="romantic">
-        <img src="/assets/images/jasmine.png" alt="Jasmine">
+        <img src="/assets/images/jasmine.png" alt="Jasmine" />
         <p>Jasmine</p>
       </div>
       <div class="answer-option" data-profile="minimalist">
-        <img src="/assets/images/orange-blossom.png" alt="Orange Blossom">
+        <img src="/assets/images/orange-blossom.png" alt="Orange Blossom" />
         <p>Orange Blossom</p>
       </div>
       <div class="answer-option" data-profile="bold">
-        <img src="/assets/images/tuberose.png" alt="Tuberose">
+        <img src="/assets/images/tuberose.png" alt="Tuberose" />
         <p>Tuberose</p>
       </div>
     </div>
   </div>
 
   <!-- Second Question -->
- <!-- Question 2: Base Note -->
-<div id="question2" style="display:none;">
-  <h2>Pick your base note:</h2>
-  <div class="image-grid" id="base-options">
-    <div class="answer-option" data-profile="oud">
-      <img src="/assets/images/oud.jpg" alt="Oud - deep, smoky, mysterious">
-      <p>Oud</p>
-    </div>
-    <div class="answer-option" data-profile="musk">
-      <img src="/assets/images/musk.jpg" alt="Musk -soft, skin-like and cozy">
-      <p>Musk</p>
-    </div>
-    <div class="answer-option" data-profile="both">
-      <img src="/assets/images/both.jpg" alt="Both - why not both?">
-      <p>Both</p>
+
+  <div id="question2" style="display: none">
+    <h2>Pick your base note:</h2>
+    <div class="image-grid" id="base-options">
+      <div class="answer-option" data-profile="oud">
+        <img src="/assets/images/oud.jpg" alt="Oud - deep, smoky, mysterious" />
+        <p>Oud</p>
+      </div>
+      <div class="answer-option" data-profile="musk">
+        <img
+          src="/assets/images/musk.jpg"
+          alt="Musk -soft, skin-like and cozy"
+        />
+        <p>Musk</p>
+      </div>
+      <div class="answer-option" data-profile="both">
+        <img src="/assets/images/both.jpg" alt="Both - why not both?" />
+        <p>Both</p>
+      </div>
     </div>
   </div>
-</div>
 
+  <!-- Third Question -->
 
- <!-- Third Question -->
-<div id="question3" style="display: none;">
-  <h2>Pick your signature sip</h2>
-  <p>Which of these delicious drink - inspired scents makes your nose happiest?</p>
-  <div id="drink-options" class="image-grid">
-    <div class="answer-option" data-profile="minimalist">
-      <img src="/assets/images/coffee.jpg" alt="Coffee">
-      <p>Coffee</p>
-    </div>
-    <div class="answer-option" data-profile="bold">
-      <img src="/assets/images/whiskey.jpg" alt="Whiskey / Bourbon">
-      <p>Whiskey / Bourbon</p>
-    </div>
-    <div class="answer-option" data-profile="romantic">
-      <img src="/assets/images/tea.jpg" alt="Tea">
-      <p>Tea</p>
-    </div>
-    <div class="answer-option" data-profile="mystery">
-      <img src="/assets/images/pina-colada.jpg" alt="Pina Colada">
-      <p>Pina Colada</p>
+  <div id="question3" style="display: none">
+    <h2>Pick your signature sip</h2>
+    <p>
+      Which of these delicious drink - inspired scents makes your nose happiest?
+    </p>
+    <div id="drink-options" class="image-grid">
+      <div class="answer-option" data-profile="minimalist">
+        <img src="/assets/images/coffee.jpg" alt="Coffee" />
+        <p>Coffee</p>
+      </div>
+      <div class="answer-option" data-profile="bold">
+        <img src="/assets/images/whiskey.jpg" alt="Whiskey / Bourbon" />
+        <p>Whiskey / Bourbon</p>
+      </div>
+      <div class="answer-option" data-profile="romantic">
+        <img src="/assets/images/tea.jpg" alt="Tea" />
+        <p>Tea</p>
+      </div>
+      <div class="answer-option" data-profile="mystery">
+        <img src="/assets/images/pina-colada.jpg" alt="Pina Colada" />
+        <p>Pina Colada</p>
+      </div>
     </div>
   </div>
-</div>
 
+  <!-- Fourth Question -->
 
-<!-- Fourth Question -->
-<div id="question4" style="display: none;">
-  <h2>Pick all the edible notes that make you melt</h2>
-  <p>(You can select more than one)</p>
-  <form id="edible-form">
-    <label><input type="checkbox" name="edible" value="romantic"> Vanilla</label><br>
-    <label><input type="checkbox" name="edible" value="mystery"> Fruity</label><br>
-    <label><input type="checkbox" name="edible" value="bold"> Chocolate</label><br>
-    <label><input type="checkbox" name="edible" value="minimalist"> Lactonic (milky, creamy)</label><br>
-    <button type="submit">Next</button>
-  </form>
-</div>
-<!--Fifth question-->
-<div id="question5" style="display: none;">
-  <h2>Which vibe feels the most like you?</h2>
-  <div id="aesthetic-options" class="image-grid">
-    <div class="aesthetic-option" data-profile="bold">
-      <img src="/assets/images/glamorous.jpg" alt="atractive woman in red velvet dress inside Glamorous Mansion">
-      <p>Velvet Glam in a Classic Mansion</p>
+  <div id="question4" style="display: none">
+    <h2>Pick the edible notes that make you melt</h2>
+    <div id="edible-options" class="image-grid">
+      <div class="edible-option" data-profile="romantic">
+        <img
+          src="/assets/images/vanilla-strawberry.jpg"
+          alt="Vanilla & Strawberry"
+        />
+        <p>Vanilla &amp; Strawberry</p>
+      </div>
+      <div class="edible-option" data-profile="minimalist">
+        <img src="/assets/images/dates-cinnamon.jpg" alt="Dates & Cinnamon" />
+        <p>Dates &amp; Cinnamon</p>
+      </div>
+      <div class="edible-option" data-profile="bold">
+        <img
+          src="/assets/images/chocolate-redberries.jpg"
+          alt="Chocolate & Red Berries"
+        />
+        <p>Chocolate &amp; Red Berries</p>
+      </div>
+      <div class="edible-option" data-profile="mystery">
+        <img src="/assets/images/almond-cherry.jpg" alt="Almond & Cherry" />
+        <p>Almond &amp; Cherry</p>
+      </div>
     </div>
-    <div class="aesthetic-option" data-profile="minimalist">
-      <img src="/assets/images/beach.jpg" alt="atractive woman in Beachy White Dress">
-      <p>Effortless Beach Day</p>
-    </div>
-    <div class="aesthetic-option" data-profile="romantic">
-      <img src="/assets/images/brunch.jpg" alt="atractive woman wearing pink serving brunch with prosseco ">
-      <p>Soft Pink Brunch & Roses</p>
-    </div>
-    <div class="aesthetic-option" data-profile="mystery">
-      <img src="/assets/images/casual.jpg" alt="atractive woman wearing white jumper and jeans, in a bookstore - Casual Chic">
-      <p>Casual Chic with Jeans</p>
+    <button id="edible-next">Next</button>
+  </div>
+
+  <!--Fifth question-->
+  
+  <div id="question5" style="display: none">
+    <h2>Which vibe feels the most like you?</h2>
+    <div id="aesthetic-options" class="image-grid">
+      <div class="aesthetic-option" data-profile="bold">
+        <img
+          src="/assets/images/glamorous.jpg"
+          alt="atractive woman in red velvet dress inside Glamorous Mansion"
+        />
+        <p>Velvet Glam in a Classic Mansion</p>
+      </div>
+      <div class="aesthetic-option" data-profile="minimalist">
+        <img
+          src="/assets/images/beach.jpg"
+          alt="atractive woman in Beachy White Dress"
+        />
+        <p>Effortless Beach Day</p>
+      </div>
+      <div class="aesthetic-option" data-profile="romantic">
+        <img
+          src="/assets/images/brunch.jpg"
+          alt="atractive woman wearing pink serving brunch with prosseco "
+        />
+        <p>Soft Pink Brunch & Roses</p>
+      </div>
+      <div class="aesthetic-option" data-profile="mystery">
+        <img
+          src="/assets/images/casual.jpg"
+          alt="atractive woman wearing white jumper and jeans, in a bookstore - Casual Chic"
+        />
+        <p>Casual Chic with Jeans</p>
+      </div>
     </div>
   </div>
-</div>
 
   <script src="script.js"></script>
 </body>
