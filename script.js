@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       selectedAnswers.push(profile);
       console.log("Stored answers so far:", selectedAnswers);
 
-      // Step 3: (Optional) visually mark it as selected
+      // Step 3: visually mark it as selected
       options.forEach(opt => opt.classList.remove("selected"));
       option.classList.add("selected");
 
@@ -23,16 +23,53 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
+  //Fix: dropdown logic
   const preferenceDropdown = document.getElementById("preference");
 
   preferenceDropdown.addEventListener("change", () => {
     const selectedValue = preferenceDropdown.value;
 
-    // Store it like the others
     selectedAnswers.push(selectedValue);
     console.log("Stored answers so far:", selectedAnswers);
 
-    // TODO: Show question 3 here later
+    // Show question 3
+    document.getElementById("question2").style.display = "none";
+    document.getElementById("question3").style.display = "block";
+  });
+
+  // Drink button logic
+  const drinkButtons = document.querySelectorAll(".drink-btn");
+
+  drinkButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const profile = button.dataset.profile;
+
+      selectedAnswers.push(profile);
+      console.log("Stored answers so far:", selectedAnswers);
+
+      document.getElementById("question3").style.display = "none";
+document.getElementById("question4").style.display = "block";
+
   });
 });
+// Question 4: Edible Notes (checkboxes)
+const edibleForm = document.getElementById("edible-form");
+
+if (edibleForm) {
+  edibleForm.addEventListener("submit", (e) => {
+    e.preventDefault(); // Stop page refresh
+
+    const checkedBoxes = document.querySelectorAll('input[name="edible"]:checked');
+    checkedBoxes.forEach(box => {
+      selectedAnswers.push(box.value);
+    });
+
+    console.log("Stored answers so far:", selectedAnswers);
+
+    document.getElementById("question4").style.display = "none";
+    alert("Great! You made it through Question 4.");
+  });
+}
+
+});
+
