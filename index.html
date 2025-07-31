@@ -2,37 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="assets/css/styles.css">
   <title>Fragrance Quiz</title>
 </head>
 
 <body>
-  <!-- First Question -->
-
-  <div id="quiz">
-    <h2 id="question">What floral note makes your heart sing?</h2>
-    <div id="answers">
-      <div class="answer-option" data-profile="romantic">
-        <img src="/assets/images/rose.png" alt="Rose" />
-        <p>Rose</p>
-      </div>
-      <div class="answer-option" data-profile="romantic">
-        <img src="/assets/images/jasmine.png" alt="Jasmine" />
-        <p>Jasmine</p>
-      </div>
-      <div class="answer-option" data-profile="minimalist">
-        <img src="/assets/images/orange-blossom.png" alt="Orange Blossom" />
-        <p>Orange Blossom</p>
-      </div>
-      <div class="answer-option" data-profile="bold">
-        <img src="/assets/images/tuberose.png" alt="Tuberose" />
-        <p>Tuberose</p>
-      </div>
+ <!-- First Question -->
+<div id="quiz" class="question">
+  <h2 id="question">What floral note makes your heart sing?</h2>
+  <div id="answers" class="image-grid">
+    <div class="answer-option" data-profile="romantic">
+      <img src="/assets/images/rose.png" alt="Rose" />
+      <p>Rose</p>
+    </div>
+    <div class="answer-option" data-profile="romantic">
+      <img src="/assets/images/jasmine.png" alt="Jasmine" />
+      <p>Jasmine</p>
+    </div>
+    <div class="answer-option" data-profile="minimalist">
+      <img src="/assets/images/orange-blossom.png" alt="Orange Blossom" />
+      <p>Orange Blossom</p>
+    </div>
+    <div class="answer-option" data-profile="bold">
+      <img src="/assets/images/tuberose.png" alt="Tuberose" />
+      <p>Tuberose</p>
     </div>
   </div>
+</div>
 
   <!-- Second Question -->
 
-  <div id="question2" style="display: none">
+  <div id="question2" class="question" style="display: none">
     <h2>Pick your base note:</h2>
     <div class="image-grid" id="base-options">
       <div class="answer-option" data-profile="oud">
@@ -52,7 +53,7 @@
 
   <!-- Third Question -->
 
-  <div id="question3" style="display: none">
+  <div id="question3" class="question" style="display: none">
     <h2>Pick your signature sip</h2>
     <p>
       Which of these delicious drink - inspired scents makes your nose happiest?
@@ -79,7 +80,7 @@
 
   <!-- Fourth Question -->
 
-  <div id="question4" style="display: none">
+  <div id="question4" class="question" style="display: none">
     <h2>Pick the edible notes that make you melt</h2>
     <div id="edible-options" class="image-grid">
       <div class="edible-option answer-option" data-profile="romantic">
@@ -103,7 +104,7 @@
 
   <!--Fifth question-->
 
-  <div id="question5" style="display: none">
+  <div id="question5" class="question" style="display: none">
     <h2>Which vibe feels the most like you?</h2>
     <div id="aesthetic-options" class="image-grid">
       <div class="aesthetic-option answer-option" data-profile="bold">
@@ -128,7 +129,7 @@
 
   <!-- Sixth question: Season -->
 
-  <div id="question6" style="display: none;">
+  <div id="question6" class="question" style="display: none;">
     <h2>Pick the season that feels most “you”</h2>
     <div id="season-options" class="image-grid">
       <div class="answer-option" data-profile="season-spring">
@@ -151,7 +152,7 @@
   </div>
 
 <!-- Seventh Question: Occasion -->
-<div id="question7" style="display: none">
+<div id="question7"  class="question" style="display: none">
   <h2>What is the main occasion?</h2>
   <div id="occasion-options" class="image-grid">
     <div class="answer-option" data-profile="occasion-work">
@@ -175,7 +176,7 @@
 
 <!-- Eighth Question -->
  
-<div id="question8" style="display: none">
+<div id="question8"  class="question" style="display: none">
   <h2>Pick your intensity</h2>
   <div id="q8-options" class="image-grid">
     <div class="answer-option" data-profile="intensity-light">
@@ -198,7 +199,7 @@
 </div>
 
 <!-- Ninth Question -->
-<div id="question9" style="display: none">
+<div id="question9"  class="question" style="display: none">
   <h2>Pick your budget</h2>
   <div id="q9-options" class="image-grid">
     <div class="answer-option" data-profile="budget-low">
@@ -221,7 +222,7 @@
 </div>
 
 <!-- Tenth Question -->
-<div id="question10" style="display: none">
+<div id="question10" class="question" style="display: none">
   <h2>What's your name?</h2>
   <div class="name-input-wrap">
     <input id="name-input" type="text" placeholder="Type your name" />

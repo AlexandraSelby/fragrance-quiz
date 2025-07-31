@@ -1,15 +1,20 @@
-/* Default look */
-.answer-option {
-  border: 2px solid transparent;
-  border-radius: 6px;
-  padding: 4px;
-  display: inline-block;
-  margin: 5px;
+/* Mobile-first: single column */
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
 }
 
-/* When selected via JS */
-.answer-option.selected {
-  border-color: #0077ff; /* Blue outline */
-  background-color: #f0f8ff; /* Very light blue background */
+/* Tablet: two columns from 600px up */
+@media (min-width: 600px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+/* Wide screens: four columns from 1200px up */
+@media (min-width: 1200px) {
+  .image-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

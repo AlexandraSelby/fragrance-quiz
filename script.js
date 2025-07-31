@@ -117,7 +117,7 @@ wireQuestion(
 
     function goNext() {
       const name = (input.value || "").trim();
-      if (!name) return; // require a name
+      if (!name) return; // require a namegi
       selectedAnswers.push(name); // keep using the same array
       document.getElementById("question10").style.display = "none";
       document.getElementById("results").style.display = "block";
