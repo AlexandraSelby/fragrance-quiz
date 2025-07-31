@@ -53,14 +53,14 @@ document.addEventListener("DOMContentLoaded", () => {
     "#answers .answer-option"
   );
 
-    // Question 2: Base note → Signature sip (initially was a dropdown)
+  // Question 2: Base note → Signature sip (initially was a dropdown)
   wireQuestion(
     "question2",
     "question3",
     "#base-options .answer-option"
   );
 
-    // Question 3: Signature sip → Edible notes (initially was button selection)
+  // Question 3: Signature sip → Edible notes (initially was button selection)
   wireQuestion(
     "question3",
     "question4",
@@ -74,12 +74,20 @@ wireQuestion(
   "#edible-options .edible-option"
 );
 
-  // Question 5: Aesthetic vibe → Season
+ // Question 5: Aesthetic vibe → Season
+wireQuestion(
+  "question5",
+  "question6",
+  "#aesthetic-options .aesthetic-option"
+);
+
+// Question 6: Season → Occasion
   wireQuestion(
-    "question5",
     "question6",
-    "#aesthetic-options .aesthetic-option"
+    "question7",
+    "#season-options .answer-option"
   );
+
 
   // TODO: wire up remaining questions in exactly the same way
 });
