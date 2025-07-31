@@ -95,7 +95,12 @@ wireQuestion(
     "#occasion-options .answer-option"
   );
 
-
+    // Question 9: Budget → (next)
+  wireQuestion(
+    "question9",
+    "question10",
+    "#q9-options .answer-option"
+  );
 
   // TODO: wire up remaining questions in exactly the same way
 });
