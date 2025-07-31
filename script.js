@@ -108,6 +108,29 @@ wireQuestion(
     "question10",
     "#q9-options .answer-option"
   );
+
+    // Question 10: Name → Results (custom input handler)
+  (function () {
+    const input = document.getElementById("name-input");
+    const btn = document.getElementById("name-next");
+    if (!btn || !input) return;
+
+    function goNext() {
+      const name = (input.value || "").trim();
+      if (!name) return; // require a name
+      selectedAnswers.push(name); // keep using the same array
+      document.getElementById("question10").style.display = "none";
+      document.getElementById("results").style.display = "block";
+
+      // TODO: call your API here with { name, answers: selectedAnswers }
+      // generateFragranceFortune(name, selectedAnswers);
+    }
+
+    btn.addEventListener("click", goNext);
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") goNext();
+    });
+  })();
  
   // TODO: wire up remaining questions in exactly the same way
 });
