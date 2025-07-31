@@ -1,3 +1,10 @@
+/* Center quiz content & cap its width */
+#quiz-app {
+  max-width: 960px;    /
+  margin: 0 auto;      
+  padding: 0 1rem;     /* prevent edge-hugging on mobile */
+}
+
 /* Mobile-first: single column */
 .image-grid {
   display: grid;
@@ -18,3 +25,10 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+/* Limit option images to their container’s width */
+.answer-option img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
