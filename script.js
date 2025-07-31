@@ -88,6 +88,14 @@ wireQuestion(
     "#season-options .answer-option"
   );
 
+// Question 7: Occasion → Intensity
+  wireQuestion(
+    "question7",
+    "question8",
+    "#occasion-options .answer-option"
+  );
+
+
 
   // TODO: wire up remaining questions in exactly the same way
 });
