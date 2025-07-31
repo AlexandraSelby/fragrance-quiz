@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ————————————————
-  
+
   // Question 1: Floral note → Base note (initial image click)
   wireQuestion(
     "quiz",
@@ -74,6 +74,13 @@ wireQuestion(
   "#edible-options .edible-option"
 );
 
-  // TODO: wire up Question 4, 5 in exactly the same way
+  // Question 5: Aesthetic vibe → Season
+  wireQuestion(
+    "question5",
+    "question6",
+    "#aesthetic-options .aesthetic-option"
+  );
+
+  // TODO: wire up remaining questions in exactly the same way
 });
 
