@@ -1,9 +1,33 @@
 // outcome-server/server.js
-require('dotenv').config(); // load .env
+const fetch = require('node-fetch');
 
+require('dotenv').config(); // load .env first
 const express = require('express');
-
 const app = express();
+
+// Enable parsing of JSON in request bodies
+app.use(express.json()); 
+
+// POST route to generate a fragrance outcome based on quiz data
+app.post('/generate-outcome', async (req, res) => {
+  // Destructure the expected data from the request body
+  const { name, answers } = req.body;
+
+  // Basic validation: Make sure we got both a name and an array of answers
+  if (!name || !Array.isArray(answers)) {
+    return res.status(400).json({ ok: false, error: 'Invalid input' });
+  }
+
+  // Log the received data for debugging
+  console.log("Received from quiz:", { name, answers });
+
+  // Respond with a mock outcome message for now (we'll replace this with AI later)
+  res.json({
+    ok: true,
+    text: `This is a test outcome for ${name}. Answers received: ${answers.length}`
+  });
+});
+
 const PORT = process.env.PORT || 8017;
 
 console.log(process.env.OPENAI_API_KEY);
