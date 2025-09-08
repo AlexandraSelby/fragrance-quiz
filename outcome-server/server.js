@@ -21,11 +21,9 @@ app.post('/generate-outcome', async (req, res) => {
   // Log the received data for debugging
   console.log("Received from quiz:", { name, answers });
 
-  // Respond with a mock outcome message for now (we'll replace this with AI later)
-  res.json({
-    ok: true,
-    text: `This is a test outcome for ${name}. Answers received: ${answers.length}`
-  });
+// STEP 1: Create a custom prompt for OpenAI
+const prompt = `A user named ${name} has completed a fragrance quiz. Based on these preferences: ${answers.join(", ")}, write a short, luxurious, and creative fragrance fortune.`;
+
 });
 
 const PORT = process.env.PORT || 8017;
