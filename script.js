@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // ————————————————
 
 // Question 1: Floral note → Base note (initial image click)
   wireQuestion(

@@ -1,8 +1,7 @@
-/* Center quiz content & cap its width */
-#quiz-app {
-  max-width: 960px;    /
-  margin: 0 auto;      
-  padding: 0 1rem;     /* prevent edge-hugging on mobile */
+/* Center content & prevent it from stretching too wide */
+body {
+  max-width: 960px;      /* tweak as needed */
+  margin: 0 auto;        /* horizontal centering */
 }
 
 /* Mobile-first: single column */
@@ -32,3 +31,10 @@
   display: block;
 }
 
+/* Consistent image crop across all cards */
+.answer-option img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
