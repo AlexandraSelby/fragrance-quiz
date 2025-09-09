@@ -1,25 +1,14 @@
 // outcome-server/server.js
 const fetch = require('node-fetch');
+const cors = require('cors');
 
-require('dotenv').config(); // load .env first
+require('dotenv').config({ path: __dirname + '/.env' });
+ // load .env first
+console.log("API KEY FROM ENV:", process.env.OPENAI_API_KEY);
+
 const express = require('express');
 const app = express();
-
-// Enable parsing of JSON in request bodies
-app.use(express.json()); 
-
-// POST route to generate a fragrance outcome based on quiz data
-app.post('/generate-outcome', async (req, res) => {
-  // Destructure the expected data from the request body
-  const { name, answers } = req.body;
-
-  // Basic validation: Make sure we got both a name and an array of answers
-  if (!name || !Array.isArray(answers)) {
-    return res.status(400).json({ ok: false, error: 'Invalid input' });
-  }
-
-  // Log the received data for debugging
-  console.log("Received from quiz:", { name, answers });
+app.use(cors());
 
 app.post('/generate-outcome', async (req, res) => {
   const { name, answers } = req.body;
@@ -135,4 +124,3 @@ app.get('/env-check', (req, res) => {
 app.listen(PORT, () => { // start server
   console.log(`Server running at http://localhost:${PORT}`);
 });
-})
