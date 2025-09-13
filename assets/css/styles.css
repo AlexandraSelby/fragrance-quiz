@@ -38,3 +38,9 @@ body {
   object-fit: cover;
   display: block;
 }
+.answer-option {
+  cursor: pointer;
+}
+.answer-option:hover {
+  outline: 2px solid hotpink;
+}
