@@ -83,4 +83,47 @@ h2::after {
   border-radius: 2px;
 }
 
+/*input element - question 10*/
 
+/* Center input + button under the heading */
+.name-input-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;         /* space between input and button */
+  flex-wrap: wrap;   /* stack nicely on small screens */
+  margin-top: 1.2rem;
+}
+/* Shared style for input + button */
+#name-input,
+#name-next {
+  font-family: "Lora", Georgia, serif;
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+/* Input */
+#name-input {
+  border-color: #ff69b4;
+  min-width: 220px;
+}
+#name-input:focus {
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.6);
+  border-color: #c71585;
+  transform: scale(1.02);
+  outline: none;
+}
+
+/* Button */
+#name-next {
+  background: linear-gradient(90deg, #c71585, #ff69b4);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#name-next:hover {
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.6);
+  transform: scale(1.05);
+}
