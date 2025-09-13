@@ -109,28 +109,51 @@ wireQuestion(
   );
 
     // Question 10: Name → Results (custom input handler)
-  (function () {
-    const input = document.getElementById("name-input");
-    const btn = document.getElementById("name-next");
-    if (!btn || !input) return;
+(function () {
+  const input = document.getElementById("name-input");
+  const btn = document.getElementById("name-next");
+  if (!btn || !input) return;
 
-    function goNext() {
-      const name = (input.value || "").trim();
-      if (!name) return; // require a namegi
-      selectedAnswers.push(name); // keep using the same array
-      document.getElementById("question10").style.display = "none";
-      document.getElementById("results").style.display = "block";
+  function goNext() {
+    const name = (input.value || "").trim();
+    if (!name) return; // require a name
+    selectedAnswers.push(name); // keep using the same array
 
-      // TODO: call your API here with { name, answers: selectedAnswers }
-      // generateFragranceFortune(name, selectedAnswers);
+    document.getElementById("question10").style.display = "none";
+    document.getElementById("results").style.display = "block";
+
+    // Call backend API to generate outcome (INSIDE goNext)
+    try {
+      fetch('http://localhost:8017/generate-outcome', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          answers: selectedAnswers.slice(0, -1) // exclude name from answers
+        })
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data.ok && data.text) {
+            document.getElementById("result-text").innerHTML = data.text;
+          } else {
+            document.getElementById("result-text").textContent =
+              "Sorry, something went wrong with the result.";
+          }
+        })
+        .catch(err => {
+          console.error("API error:", err);
+          document.getElementById("result-text").textContent =
+            "There was an error contacting the AI.";
+        });
+    } catch (e) {
+      console.error("JS crash:", e);
     }
+  }
 
-    btn.addEventListener("click", goNext);
-    input.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") goNext();
-    });
-  })();
- 
-  // TODO: wire up remaining questions in exactly the same way
+  btn.addEventListener("click", goNext);
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") goNext();
+  });
+})();
 });
-
