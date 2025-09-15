@@ -1,3 +1,4 @@
+const BASE_URL = window.location.origin;
 
 document.addEventListener("DOMContentLoaded", () => {
   // Global storage of quiz answers
@@ -124,7 +125,7 @@ wireQuestion(
 
     // Call backend API to generate outcome (INSIDE goNext)
     try {
-      fetch('http://localhost:3000/generate-outcome', {
+      fetch(`${BASE_URL}/generate-outcome`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
