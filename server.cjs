@@ -6,15 +6,22 @@
 
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 
 require('dotenv').config({ path: __dirname + '/.env' });
 
 const app = express();
 
+app.use(express.static(__dirname));
+
 // 1M request body size
 app.use(express.json({ limit: '1mb' }));
 // Allow cross-origin requests while developing
 app.use(cors({ origin: true }));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 
 // --- Config ---
 if (!process.env.OPENAI_API_KEY) {
