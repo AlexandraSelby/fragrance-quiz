@@ -20,7 +20,7 @@ app.use(cors({ origin: true }));
 if (!process.env.OPENAI_API_KEY) {
   console.warn('[WARN] OPENAI_API_KEY missing. Set it in .env');
 }
-const PORT = process.env.PORT || 8017;
+const PORT = process.env.PORT || 3000;
 const OPENAI_MODEL = process.env.OPENAI_MODEL || 'gpt-4o';
 
 // --- Helpers ---

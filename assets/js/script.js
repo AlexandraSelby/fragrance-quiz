@@ -124,7 +124,7 @@ wireQuestion(
 
     // Call backend API to generate outcome (INSIDE goNext)
     try {
-      fetch('http://localhost:8017/generate-outcome', {
+      fetch('https://localhost:3000/generate-outcome', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
