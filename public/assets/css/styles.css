@@ -127,3 +127,33 @@ h2::after {
   box-shadow: 0 0 12px rgba(255, 105, 180, 0.6);
   transform: scale(1.05);
 }
+
+/* Loading indicator */
+.bottle-spinner {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  animation: spin 8s linear infinite;
+  width: 60px;
+  height: 60px;
+}
+
+.bottle-spinner img {
+  width: 100%;
+  height: auto;
+  opacity: 0.85;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#result-text p {
+  text-align: center;
+  font-family: "Lora", serif;
+  font-size: 1rem;
+  color: #5c4a4a;
+  margin-top: 10px;
+}
